@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
+  NetworkBinding().dependencies();
   runApp(const MyApp());
 }
 
