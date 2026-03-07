@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../../../core/routes/app_routes.dart';
 import '../controllers/products_controller.dart';
 import '../widgets/product_card.dart';
 
@@ -41,7 +42,7 @@ class ProductsPage extends GetView<ProductsController> {
             return ProductCard(
               product: product,
               onTap: () {
-                Get.toNamed('/product-details', arguments: product.id);
+                Get.toNamed(AppRoutes.productDetails, arguments: product.id);
               },
             );
           },

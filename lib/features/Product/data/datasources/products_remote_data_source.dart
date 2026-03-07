@@ -25,8 +25,8 @@ class ProductsRemoteDataSourceImpl implements ProductsRemoteDataSource {
   @override
   Future<ProductModel> getProductDetails(int id) async {
     final response = await apiService.get(
-      '/products/$id',
-    ); // fixme to be replaced with the correct endpoint
+      '${ApiConstants.products}/$id',
+    );
 
     return ProductModel.fromJson(response.data);
   }
