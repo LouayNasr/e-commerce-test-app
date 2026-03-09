@@ -31,13 +31,22 @@ class ProductCard extends StatelessWidget {
               const SizedBox(height: 8),
               Text(
                 product.title,
-                maxLines: 2,
+                maxLines: 1,
                 overflow: TextOverflow.ellipsis,
                 style: const TextStyle(
                   fontWeight: FontWeight.w500,
                 ),
               ),
               const SizedBox(height: 4),
+              Text(
+                product.category,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: const TextStyle(
+                  fontWeight: FontWeight.w400,
+                ),
+              ),
+              const SizedBox(height: 4,),
               Text(
                 '\$${product.price}',
                 style: const TextStyle(

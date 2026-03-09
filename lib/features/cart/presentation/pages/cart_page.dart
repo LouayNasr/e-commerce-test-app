@@ -10,10 +10,8 @@ class CartPage extends GetView<CartController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xff081c15),
       appBar: AppBar(
         title: const Text("Your cart"),
-        backgroundColor: const Color(0xff081c15),
       ),
       body: Column(
         children: [

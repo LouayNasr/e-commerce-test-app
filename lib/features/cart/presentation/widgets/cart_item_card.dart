@@ -20,8 +20,8 @@ class CartItemCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(18),
         gradient: const LinearGradient(
           colors: [
-            Color(0xff0f3d2e),
-            Color(0xff0b2e22),
+            Color(0xff424242),
+            Color(0xff303030),
           ],
         ),
       ),
@@ -61,7 +61,7 @@ class CartItemCard extends StatelessWidget {
                 Text(
                   "\$${item.price.toStringAsFixed(2)}",
                   style: const TextStyle(
-                    color: Color(0xff37d67a),
+                    color: Colors.white70,
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
                   ),

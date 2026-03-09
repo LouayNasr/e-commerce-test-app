@@ -11,7 +11,7 @@ class CartSummary extends GetView<CartController> {
     return Container(
       padding: const EdgeInsets.all(20),
       decoration: const BoxDecoration(
-        color: Color(0xff0b2e22),
+        color: Color(0xff424242),
         borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
       ),
       child: Obx(
@@ -22,7 +22,7 @@ class CartSummary extends GetView<CartController> {
             _row("Shipping", 0),
             _row("Estimated Tax", controller.tax),
 
-            const Divider(color: Colors.white24),
+            const Divider(color: Colors.grey),
 
             _row("Total", controller.total, isTotal: true),
 
@@ -33,7 +33,7 @@ class CartSummary extends GetView<CartController> {
               height: 56,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xff37d67a),
+                  backgroundColor: Colors.grey,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30),
                   ),
@@ -56,7 +56,7 @@ class CartSummary extends GetView<CartController> {
                         style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
-                          color: Colors.black,
+                          color: Colors.white,
                         ),
                       ),
               ),
@@ -83,7 +83,7 @@ class CartSummary extends GetView<CartController> {
           Text(
             "\$${value.toStringAsFixed(2)}",
             style: TextStyle(
-              color: isTotal ? const Color(0xff37d67a) : Colors.white,
+              color: Colors.white70,
               fontWeight: FontWeight.bold,
               fontSize: isTotal ? 20 : 14,
             ),
