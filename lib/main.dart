@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
-import 'core/di/network_binding.dart';
+import 'core/di/initial_binding.dart';
 import 'core/routes/app_pages.dart';
 
 void main() {
-  NetworkBinding().dependencies();
+  InitialBinding().dependencies();
   runApp(const MyApp());
 }
 

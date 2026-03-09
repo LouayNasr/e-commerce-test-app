@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../../core/routes/app_routes.dart';
+import '../../../../core/widgets/cart_icon.dart';
 import '../controllers/products_controller.dart';
 import '../widgets/product_card.dart';
 
@@ -13,6 +14,9 @@ class ProductsPage extends GetView<ProductsController> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Store'),
+        actions: const [
+          CartIcon(),
+        ],
       ),
       body: Obx(() {
         if (controller.isLoading.value) {

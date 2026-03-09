@@ -1,6 +1,7 @@
 import 'package:fsit_test/features/Product/presentation/pages/products_page.dart';
 import 'package:get/get.dart';
 
+import '../../features/Cart/presentation/pages/cart_page.dart';
 import '../../features/Product/presentation/bindings/product_details_binding.dart';
 import '../../features/Product/presentation/bindings/products_binding.dart';
 import '../../features/Product/presentation/pages/product_details_page.dart';
@@ -19,5 +20,10 @@ class AppPages {
       page: () => const ProductDetailsPage(),
       binding: ProductDetailsBinding(),
     ),
+
+    GetPage(
+      name: AppRoutes.cart,
+      page: () => const CartPage(),
+    )
   ];
 }

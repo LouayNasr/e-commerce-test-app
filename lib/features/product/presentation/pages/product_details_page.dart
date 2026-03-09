@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../../../core/widgets/cart_icon.dart';
+import '../../../Cart/domain/entities/cart_item.dart';
+import '../../../Cart/presentation/controllers/cart_controller.dart';
 import '../controllers/product_details_controller.dart';
 
 class ProductDetailsPage extends GetView<ProductDetailsController> {
@@ -10,7 +13,10 @@ class ProductDetailsPage extends GetView<ProductDetailsController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Product Details"),
+        title: const Text("product Details"),
+        actions: const [
+          CartIcon(),
+        ],
       ),
       body: Obx(() {
         if (controller.isLoading.value) {
@@ -22,6 +28,7 @@ class ProductDetailsPage extends GetView<ProductDetailsController> {
         }
 
         final product = controller.product.value;
+        final cart = Get.find<CartController>();
 
         if (product == null) {
           return const SizedBox();
@@ -84,8 +91,20 @@ class ProductDetailsPage extends GetView<ProductDetailsController> {
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: () {},
-                  child: const Text("Add to Cart"),
+                  onPressed: () {
+                    cart.addToCart(
+                      CartItem(
+                        id: product.id,
+                        title: product.title,
+                        price: product.price,
+                        image: product.image,
+                        description: product.description,
+                        category: product.category,
+                        quantity: 1,
+                      ),
+                    );
+                  },
+                  child: const Text("Add to cart"),
                 ),
               ),
             ],
