@@ -52,6 +52,12 @@ class ProductsPage extends GetView<ProductsController> {
           },
         );
       }),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Get.toNamed(AppRoutes.addProduct);
+        },
+        child: const Icon(Icons.add),
+      ),
     );
   }
 }

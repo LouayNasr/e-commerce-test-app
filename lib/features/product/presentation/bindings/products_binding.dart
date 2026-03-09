@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
 
 import '../../data/datasources/products_remote_data_source.dart';
+import '../../data/repositories/products_repository_impl.dart';
 import '../../domain/repositories/products_repository.dart';
 import '../../domain/usecases/get_products_usecase.dart';
 import '../controllers/products_controller.dart';

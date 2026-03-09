@@ -1,6 +1,8 @@
+import 'package:equatable/equatable.dart';
+
 import 'rating.dart';
 
-class Product {
+class Product extends Equatable  {
   final int id;
   final String title;
   final double price;
@@ -9,7 +11,7 @@ class Product {
   final String description;
   final Rating rating;
 
-  Product({
+  const Product({
     required this.id,
     required this.title,
     required this.price,
@@ -18,4 +20,14 @@ class Product {
     required this.description,
     required this.rating,
   });
+
+  @override
+  List<Object?> get props => [
+    id,
+    title,
+    price,
+    description,
+    category,
+    image,
+  ];
 }
